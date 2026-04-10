@@ -200,10 +200,10 @@ export function renderProfile(profile, escapeHtml, markdownToHtml) {
     '<button type="button" class="settings-third-party-option third-party-option third-party-accept">Accept all</button>' +
     '<button type="button" class="settings-third-party-option third-party-option third-party-reject">Reject all</button>' +
     "<button" +
-    'type="button"' +
-    'class="settings-third-party-option third-party-option third-party-manage"' +
-    'command="show-modal"' +
-    'commandfor="third-party-dialog-0"' +
+    ' type="button"' +
+    ' class="settings-third-party-option third-party-option third-party-manage"' +
+    ' command="show-modal"' +
+    ' commandfor="third-party-dialog-0"' +
     ">" +
     "Manage preferences" +
     "</button>" +
@@ -215,11 +215,7 @@ export function renderProfile(profile, escapeHtml, markdownToHtml) {
     `<li><a href="${HREF_PRIVACY}" target="_blank" rel="privacy-policy">Privacy</a></li>` +
     '<li><button type="button" class="btn-privacy-settings-footer">Privacy Settings</button></li>' +
     "</ul>" +
-    '<p class="powered-by">Powered by <a href="' +
-    HREF_HOME +
-    '" rel="noopener noreferrer" target="_blank">' +
-    PLATFORM_NAME +
-    "</a></p>" +
+    `<p class="powered-by">Powered by <a href="${HREF_HOME}" rel="noopener noreferrer" target="_blank">${PLATFORM_NAME}</a></p>` +
     "</footer>" +
     '<dialog class="third-party-dialog" id="third-party-dialog-0">' +
     '<h2 class="third-party-dialog-title">Manage third-party preferences</h2>' +
