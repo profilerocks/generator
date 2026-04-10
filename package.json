@@ -1,6 +1,6 @@
 {
   "name": "@profile.rocks/generator",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "author": "Stefan Samson <ss42701@outlook.com> (https://ssbit01.github.io/)",
   "repository": "github:profilerocks/generator",
   "main": "index.js",
@@ -8,10 +8,6 @@
     "url": "https://github.com/profilerocks/generator/issues"
   },
   "description": "profile.rocks page generator.",
-  "files": [
-    "index.js",
-    "index.d.ts"
-  ],
   "homepage": "https://github.com/profilerocks/generator#readme",
   "keywords": [
     "generator",
@@ -31,7 +27,7 @@
     "prettier:write": "prettier . --write"
   },
   "type": "module",
-  "types": "index.d.ts",
+  "types": "./src/index.d.ts",
   "devDependencies": {
     "@eslint/js": "^10.0.1",
     "@types/node": "^25.6.0",
