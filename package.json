@@ -1,0 +1,46 @@
+{
+  "name": "@profilerocks/generator",
+  "version": "1.0.0",
+  "author": "Stefan Samson <ss42701@outlook.com> (https://ssbit01.github.io/)",
+  "repository": "github:profilerocks/generator",
+  "main": "index.js",
+  "bugs": {
+    "url": "https://github.com/profilerocks/generator/issues"
+  },
+  "description": "profile.rocks page generator.",
+  "files": [
+    "index.js",
+    "index.d.ts"
+  ],
+  "homepage": "https://github.com/profilerocks/generator#readme",
+  "keywords": [
+    "generator",
+    "html",
+    "page",
+    "types",
+    "web",
+    "webpage"
+  ],
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "build": "esbuild ./src/index.js --bundle --minify --outfile=./dist/index.min.js",
+    "build:types": "tsc",
+    "eslint": "eslint",
+    "prettier:check": "prettier . --check",
+    "prettier:write": "prettier . --write"
+  },
+  "type": "module",
+  "types": "index.d.ts",
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@types/node": "^25.6.0",
+    "esbuild": "0.28.0",
+    "eslint": "^10.2.0",
+    "eslint-config-prettier": "^10.1.8",
+    "globals": "^17.4.0",
+    "prettier": "^3.8.1",
+    "typescript": "^5",
+    "typescript-eslint": "^8.58.0"
+  }
+}
