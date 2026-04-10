@@ -110,17 +110,19 @@ export function renderProfile(profile, escapeHtml, markdownToHtml) {
     '<meta name="format-detection" content="telephone=no">' +
     '<meta name="mobile-web-app-capable" content="yes">' +
     '<meta name="MSSmartTagsPreventParsing" content="true">' +
-    `<meta name="author" content="${profile.name_id}">` +
-    `<meta name="description" content="${profile.meta_description}">` +
     `<meta name="generator" content="${PLATFORM_NAME}">` +
     `<link rel="canonical" href="${canonical}">` +
     `<link rel="help" href="${HREF_HELP}">` +
-    `<link rel="icon" href="${HREF_HOME}/favicon-16x16.png" sizes="16x16" type="image/png">` +
-    `<link rel="icon" href="${HREF_HOME}/favicon-32x32.png" sizes="32x32" type="image/png">` +
-    `<link rel="icon" href="${HREF_HOME}/favicon.ico" sizes="32x32" type="image/vnd.microsoft.icon">` +
     `<link rel="privacy-policy" href="${HREF_PRIVACY}">` +
-    `<link rel="stylesheet" href="${HREF_THEME_ASSETS + (profile.theme || "AAAAAAAAAAAAAAAAAAAAAAAA")}.css">` +
     `<link rel="terms-of-service" href="${HREF_TERMS}">` +
+    `<link rel="icon" href="${HREF_HOME}/favicon-96x96.png" sizes="96x96" type="image/png">` +
+    `<link rel="icon" href="${HREF_HOME}/favicon.svg" type="image/svg+xml">` +
+    `<link rel="shortcut icon" href="${HREF_HOME}/favicon.ico">` +
+    `<link rel="apple-touch-icon" href="${HREF_HOME}/apple-touch-icon.png" sizes="180x180">` +
+    // Dynamic tags
+    `<meta name="author" content="${profile.name_id}">` +
+    `<meta name="description" content="${profile.meta_description}">` +
+    `<link rel="stylesheet" href="${HREF_THEME_ASSETS + (profile.theme || "AAAAAAAAAAAAAAAAAAAAAAAA")}.css">` +
     `<title>${profile.title}</title>` +
     `<meta name="apple-mobile-web-app-title" content="${profile.title}">` +
     `<meta property="og:description" content="${profile.meta_description}">` +
