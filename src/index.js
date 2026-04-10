@@ -140,9 +140,7 @@ export function renderProfile(profile, escapeHtml, markdownToHtml) {
   }
 
   html +=
-    '<figcaption class="page-header-figcaption" title="' +
-    profile.display_name +
-    '">' +
+    `<figcaption class="page-header-figcaption" title="${profile.display_name}">` +
     profile.display_name +
     "</figcaption>" +
     "</figure>" +
