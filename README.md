@@ -1,6 +1,8 @@
 # profile.rocks page generator
 
-TODO:
+Open source repository of the page generator for [profile.rocks](https://www.profile.rocks/).
+
+ToDo list:
 
 - Complete this readme.
 - Make a dev server to personalize profile pages in real time.
