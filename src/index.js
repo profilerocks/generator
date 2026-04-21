@@ -1,4 +1,4 @@
-import { HREF_ASSETS, HREF_HELP, HREF_HOME, HREF_PRIVACY, HREF_REPORT, HREF_TERMS, PLATFORM_NAME, SITE } from "#src/custom";
+import { HREF_ASSETS, HREF_HELP, HREF_HOME, HREF_PRIVACY, HREF_REPORT, HREF_TERMS, PLATFORM_NAME, SITE } from "./custom.js";
 
 /**
  * @typedef {Object} DataEntry
@@ -7,13 +7,7 @@ import { HREF_ASSETS, HREF_HELP, HREF_HOME, HREF_PRIVACY, HREF_REPORT, HREF_TERM
  */
 
 /**
- * @callback EscapeHtml
- * @param {(string|number|boolean|object)} input
- * @returns {string}
- */
-
-/**
- * @callback MarkdownToHtml
+ * @callback StringTransformer
  * @param {string} input
  * @returns {string}
  */
@@ -50,7 +44,7 @@ const SITE_WITH_SLASH = SITE + "/";
  * @function renderButtonLink
  * @param {string} href
  * @param {string} display
- * @param {EscapeHtml} escapeHTML
+ * @param {StringTransformer} escapeHTML
  */
 function renderButtonLink(href, display, escapeHTML) {
   return (
@@ -66,7 +60,7 @@ function renderButtonLink(href, display, escapeHTML) {
  * @function renderButtonLinkEmbed
  * @param {string} href
  * @param {string} display
- * @param {EscapeHtml} escapeHTML
+ * @param {StringTransformer} escapeHTML
  */
 function renderButtonLinkEmbed(href, display, escapeHTML) {
   return (
@@ -81,8 +75,8 @@ function renderButtonLinkEmbed(href, display, escapeHTML) {
 /**
  * @function renderProfile
  * @param {Profile} profile
- * @param {EscapeHtml} escapeHtml
- * @param {MarkdownToHtml} markdownToHtml
+ * @param {StringTransformer} escapeHtml
+ * @param {StringTransformer} markdownToHtml
  * @return {string} HTML page.
  */
 export function renderProfile(profile, escapeHtml, markdownToHtml) {

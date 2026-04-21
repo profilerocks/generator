@@ -29,10 +29,7 @@
     // CUSTOM
     "checkJs": true,
     "declaration": true,
-    "emitDeclarationOnly": true,
-    "paths": {
-      "#src/*": ["./src/*"]
-    }
+    "emitDeclarationOnly": true
   },
   // CUSTOM
   "include": ["src/**/*"],
