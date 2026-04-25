@@ -18,6 +18,7 @@ import { HREF_ASSETS, HREF_HELP, HREF_HOME, HREF_PRIVACY, HREF_REPORT, HREF_TERM
  * @property {string} public_id
  * @property {DataEntry[]} [data]
  * @property {string} [display_name]
+ * @property {boolean} [index]
  * @property {string} [lang]
  * @property {boolean} [photo]
  * @property {string} [theme]
@@ -124,6 +125,10 @@ export function renderProfile(profile, escapeHtml, markdownToHtml) {
     `<meta property="og:title" content="${profile.name_id}">` +
     '<meta property="og:type" content="website">' +
     `<meta property="og:url" content="${canonical}">`;
+
+  if (!profile.index) {
+    html += '<meta name="robots" content="noindex">';
+  }
 
   profile.display_name = profile.display_name ? escapeHtml(profile.display_name) : profile.name_id;
 

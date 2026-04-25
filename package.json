@@ -1,6 +1,6 @@
 {
   "name": "@profile.rocks/generator",
-  "version": "1.0.5",
+  "version": "1.1.0",
   "author": "Stefan Samson <ss42701@outlook.com> (https://ssbit01.github.io/)",
   "repository": "github:profilerocks/generator",
   "main": "./src/index.js",
