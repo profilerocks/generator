@@ -17,6 +17,7 @@ export type Profile = {
     public_id: string;
     data?: DataEntry[] | undefined;
     display_name?: string | undefined;
+    index?: boolean | undefined;
     lang?: string | undefined;
     photo?: boolean | undefined;
     /**
