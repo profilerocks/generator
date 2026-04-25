@@ -130,13 +130,13 @@ export function renderProfile(profile, escapeHtml, markdownToHtml) {
     html += '<meta name="robots" content="noindex">';
   }
 
-  profile.display_name = profile.display_name ? escapeHtml(profile.display_name) : profile.name_id;
-
   html += "</head>" + "<body>" + '<header class="page-header">' + '<figure class="page-header-figure">';
 
   if (profile.photo) {
     html += '<img src="' + HREF_PHOTO + profile.public_id + '/photo" alt="photo" draggable="false" class="page-header-img">';
   }
+
+  profile.display_name = profile.display_name ? escapeHtml(profile.display_name) : profile.name_id;
 
   html +=
     `<figcaption class="page-header-figcaption" title="${profile.display_name}">` +
