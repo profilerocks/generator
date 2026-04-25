@@ -18,9 +18,9 @@ import { HREF_ASSETS, HREF_HELP, HREF_HOME, HREF_PRIVACY, HREF_REPORT, HREF_TERM
  * @property {string} public_id
  * @property {DataEntry[]} [data]
  * @property {string} [display_name]
- * @property {boolean} [index]
  * @property {string} [lang]
  * @property {boolean} [photo]
+ * @property {boolean} [robots]
  * @property {string} [theme]
  *
  * Premium features:
@@ -126,7 +126,7 @@ export function renderProfile(profile, escapeHtml, markdownToHtml) {
     '<meta property="og:type" content="website">' +
     `<meta property="og:url" content="${canonical}">`;
 
-  if (!profile.index) {
+  if (!profile.robots) {
     html += '<meta name="robots" content="noindex">';
   }
 
