@@ -25,7 +25,6 @@ import { HREF_ASSETS, HREF_HELP, HREF_HOME, HREF_PRIVACY, HREF_REPORT, HREF_TERM
  *
  * Premium features:
  *
- * @property {boolean} [favicon]
  * @property {string} [meta_description]
  * @property {string} [title]
  * @property {boolean} [watermark]
@@ -213,8 +212,13 @@ export function renderProfile(profile, escapeHtml, markdownToHtml) {
     `<li><a href="${HREF_REPORT}?public_id=${profile.public_id}" target="_blank" rel="noopener noreferrer">Report</a></li>` +
     `<li><a href="${HREF_PRIVACY}" target="_blank" rel="privacy-policy">Privacy</a></li>` +
     '<li><button type="button" class="btn-privacy-settings-footer">Privacy Settings</button></li>' +
-    "</ul>" +
-    `<p class="powered-by">Powered by <a href="${HREF_HOME}" rel="noopener noreferrer" target="_blank">${PLATFORM_NAME}</a></p>` +
+    "</ul>";
+  
+  if (profile.watermark !== false) {
+    html += `<p class="powered-by">Powered by <a href="${HREF_HOME}" rel="noopener noreferrer" target="_blank">${PLATFORM_NAME}</a></p>`;
+  }
+  
+  html +=
     "</footer>" +
     '<dialog class="third-party-dialog" id="third-party-dialog-0">' +
     '<h2 class="third-party-dialog-title">Manage third-party preferences</h2>' +
