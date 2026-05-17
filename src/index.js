@@ -33,10 +33,12 @@ import { HREF_ASSETS, HREF_HELP, HREF_HOME, HREF_PRIVACY, HREF_REPORT, HREF_TERM
 const HREF_PHOTO = HREF_ASSETS + "/profile/";
 const HREF_THEME_ASSETS = HREF_ASSETS + "/theme/";
 
-const HTML_SCRIPT = `<script
-src="${HREF_ASSETS}/scripts/client/1.0.0.js"
-integrity="sha384-8yhR9hjdV61KvGVOnFd+81yePilp2srVdX/A+VaEXdN+u9QAaGuqG+NcjA2Pksjg"
-crossorigin="anonymous"></script>`;
+const HTML_SCRIPT =
+  "<script" +
+  ` src="${HREF_ASSETS}/scripts/client/1.0.0.js"` +
+  ' integrity="sha384-8yhR9hjdV61KvGVOnFd+81yePilp2srVdX/A+VaEXdN+u9QAaGuqG+NcjA2Pksjg"' +
+  ' crossorigin="anonymous"' +
+  "></script>";
 
 const SITE_WITH_SLASH = SITE + "/";
 
@@ -64,7 +66,7 @@ function renderButtonLink(href, display, escapeHTML) {
  */
 function renderButtonLinkEmbed(href, display, escapeHTML) {
   return (
-    `<div class="embed-container>` +
+    '<div class="embed-container">' +
     `<a href="${href}" rel="noopener noreferrer" target="_blank" class="btn-link-embed" title="${display}">` +
     `<span class="btn-link-embed-text">${escapeHTML(display)}</span>` +
     "</a>" +
