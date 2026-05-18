@@ -35,8 +35,8 @@ const HREF_THEME_ASSETS = HREF_ASSETS + "/theme/";
 
 const HTML_SCRIPT =
   "<script" +
-  ` src="${HREF_ASSETS}/scripts/client/1.0.0.js"` +
-  ' integrity="sha384-8yhR9hjdV61KvGVOnFd+81yePilp2srVdX/A+VaEXdN+u9QAaGuqG+NcjA2Pksjg"' +
+  ` src="${HREF_ASSETS}/scripts/client/1.0.1.js"` +
+  ' integrity="sha384-GDdmni1wTGrs8HFJ4Q7DR6GABpPuoKheCLDi2qPG42uEZz30Iv/Wgxy6rGN6cCqj"' +
   ' crossorigin="anonymous"' +
   "></script>";
 
